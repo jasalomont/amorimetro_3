@@ -43,7 +43,7 @@ class AmorimetrosController < ApplicationController
     @amorimetro = Amorimetro.find(params.fetch("id_to_modify"))
 
     @amorimetro.points = params.fetch("points")
-    @amorimetro.user_id = params.fetch("user_id")
+    
     @amorimetro.reason = params.fetch("reason")
 
     if @amorimetro.valid?
