@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link amorimetro start -->
       <div class="col">
         <% if current_user == @amorimetro.user %>
           <a href="/amorimetros/<%= @amorimetro.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link amorimetro end -->
 
-      <!-- Delete link amorimetro start -->
       <div class="col">
         <% if current_user == @amorimetro.user %>
           <a href="/delete_amorimetro/<%= @amorimetro.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,23 +26,19 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link amorimetro end -->
     </div>
 
     <dl>
       <dt>
         Points
       </dt>
-      <!-- Display points start -->
       <dd>
         <%= @amorimetro.points %>
       </dd>
-      <!-- Display points end -->
 
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @amorimetro.user.present? %>
           <a href="/users/<%= @amorimetro.user_id %>">
@@ -53,37 +46,28 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Reason
       </dt>
-      <!-- Display reason start -->
       <dd>
         <%= @amorimetro.reason %>
       </dd>
-      <!-- Display reason end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@amorimetro.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@amorimetro.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

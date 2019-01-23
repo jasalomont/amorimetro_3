@@ -5,39 +5,25 @@
 
 <hr>
 
-<!-- Form amorimetro start -->
 <form action="/create_amorimetro" method="post">
-<!-- Form amorimetro end -->
 
-  <!-- Label and input for points start -->
   <div class="form-group">
     <label for="points">
       Points
     </label>
 
-    <!-- Input for points start -->
     <input type="text" id="points" name="points" class="form-control">
-    <!-- Input for points end -->
   </div>
-  <!-- Label and input for points end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Input for "user_id" start -->
   <input type="hidden" name="user_id" value="<%= current_user.id %>">
-  <!-- Input for "user_id" end -->
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for reason start -->
   <div class="form-group">
     <label for="reason">
       Reason
     </label>
 
-    <!-- Input for reason start -->
     <input type="text" id="reason" name="reason" class="form-control">
-    <!-- Input for reason end -->
   </div>
-  <!-- Label and input for reason end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create amorimetro

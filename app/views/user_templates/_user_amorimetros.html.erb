@@ -10,11 +10,9 @@
   <ul class="list-group list-group-flush">
     <% @user.amorimetros.each do |amorimetro| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/amorimetros/<%= amorimetro.id %>">
           <%= amorimetro.points %>
         </a>
-        <!-- Show link end -->
 
       </li>
     <% end %>

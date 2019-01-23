@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @amorimetro.errors.any? %>
   <% @amorimetro.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,36 +12,24 @@
 
 <hr>
 
-<!-- Form amorimetro start -->
 <form action="/update_amorimetro/<%= @amorimetro.id %>" method="post">
-<!-- Form amorimetro end -->
 
-  <!-- Label and input for points start -->
   <div class="form-group">
     <label for="points">
       Points
     </label>
 
-    <!-- Input for points start -->
     <input type="text" id="points" name="points" class="form-control" value="<%= @amorimetro.points %>">
-    <!-- Input for points end -->
   </div>
-  <!-- Label and input for points end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for reason start -->
   <div class="form-group">
     <label for="reason">
       Reason
     </label>
 
-    <!-- Input for reason start -->
     <input type="text" id="reason" name="reason" class="form-control" value="<%= @amorimetro.reason %>">
-    <!-- Input for reason end -->
   </div>
-  <!-- Label and input for reason end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update amorimetro
