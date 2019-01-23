@@ -68,7 +68,11 @@
 
         <!-- Display amorimetro.user_id start -->
         <td>
-          <%= amorimetro.user.email %>
+          <% if amorimetro.user.present? %>
+            <a href="/users/<%= amorimetro.user.id %>">
+              <%= amorimetro.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display amorimetro.user_id end -->
 

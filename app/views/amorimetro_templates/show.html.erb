@@ -47,7 +47,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @amorimetro.user_id %>
+        <% if @amorimetro.user.present? %>
+          <a href="/users/<%= @amorimetro.user_id %>">
+            <%= @amorimetro.user.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 
