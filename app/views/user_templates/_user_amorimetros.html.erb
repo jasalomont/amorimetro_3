@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Amorimetros
+
+    <a data-toggle="collapse" href="#user_amorimetros_new_form">
+      Add amorimetro
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.amorimetros.each do |amorimetro| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/amorimetros/<%= amorimetro.id %>">
+          <%= amorimetro.points %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>

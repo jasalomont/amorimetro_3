@@ -55,6 +55,14 @@ class AmorimetrosController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @amorimetro = Amorimetro.find(params.fetch("id_to_remove"))
+
+    @amorimetro.destroy
+
+    redirect_to("/users/#{@amorimetro.user_id}", notice: "Amorimetro deleted successfully.")
+  end
+
   def destroy_row
     @amorimetro = Amorimetro.find(params.fetch("id_to_remove"))
 

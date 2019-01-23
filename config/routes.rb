@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_amorimetro/:id_to_remove", { :controller => "amorimetros", :action => "destroy_row" })
+  get("/delete_amorimetro_from_user/:id_to_remove", { :controller => "amorimetros", :action => "destroy_row_from_user" })
 
   #------------------------------
 
