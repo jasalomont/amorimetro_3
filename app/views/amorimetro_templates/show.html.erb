@@ -1,0 +1,82 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Amorimetro #<%= @amorimetro.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/amorimetros" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link amorimetro start -->
+      <div class="col">
+        <a href="/amorimetros/<%= @amorimetro.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit amorimetro
+        </a>
+      </div>
+      <!-- Edit link amorimetro end -->
+
+      <!-- Delete link amorimetro start -->
+      <div class="col">
+        <a href="/delete_amorimetro/<%= @amorimetro.id %>" class="btn btn-block btn-outline-secondary">
+          Delete amorimetro
+        </a>
+      </div>
+      <!-- Delete link amorimetro end -->
+    </div>
+
+    <dl>
+      <dt>
+        Points
+      </dt>
+      <!-- Display points start -->
+      <dd>
+        <%= @amorimetro.points %>
+      </dd>
+      <!-- Display points end -->
+
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @amorimetro.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Reason
+      </dt>
+      <!-- Display reason start -->
+      <dd>
+        <%= @amorimetro.reason %>
+      </dd>
+      <!-- Display reason end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@amorimetro.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@amorimetro.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

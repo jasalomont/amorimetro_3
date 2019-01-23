@@ -1,0 +1,56 @@
+<h1>
+  Edit amorimetro #<%= @amorimetro.id %>
+</h1>
+
+<hr>
+
+<!-- Form amorimetro start -->
+<form action="/update_amorimetro/<%= @amorimetro.id %>" method="post">
+<!-- Form amorimetro end -->
+
+  <!-- Label and input for points start -->
+  <div class="form-group">
+    <label for="points">
+      Points
+    </label>
+
+    <!-- Input for points start -->
+    <input type="text" id="points" name="points" class="form-control" value="<%= @amorimetro.points %>">
+    <!-- Input for points end -->
+  </div>
+  <!-- Label and input for points end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @amorimetro.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for reason start -->
+  <div class="form-group">
+    <label for="reason">
+      Reason
+    </label>
+
+    <!-- Input for reason start -->
+    <input type="text" id="reason" name="reason" class="form-control" value="<%= @amorimetro.reason %>">
+    <!-- Input for reason end -->
+  </div>
+  <!-- Label and input for reason end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update amorimetro
+  </button>
+</form>
+
+<hr>
+
+<a href="/amorimetros">
+  Go back
+</a>
