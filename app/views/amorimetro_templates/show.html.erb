@@ -13,17 +13,21 @@
 
       <!-- Edit link amorimetro start -->
       <div class="col">
-        <a href="/amorimetros/<%= @amorimetro.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit amorimetro
-        </a>
+        <% if current_user == @amorimetro.user %>
+          <a href="/amorimetros/<%= @amorimetro.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit amorimetro
+          </a>
+        <% end %>
       </div>
       <!-- Edit link amorimetro end -->
 
       <!-- Delete link amorimetro start -->
       <div class="col">
-        <a href="/delete_amorimetro/<%= @amorimetro.id %>" class="btn btn-block btn-outline-secondary">
-          Delete amorimetro
-        </a>
+        <% if current_user == @amorimetro.user %>
+          <a href="/delete_amorimetro/<%= @amorimetro.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete amorimetro
+          </a>
+        <% end %>
       </div>
       <!-- Delete link amorimetro end -->
     </div>
