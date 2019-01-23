@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "amorimetros#index"
   # Routes for the Amorimetro resource:
 
   # CREATE
