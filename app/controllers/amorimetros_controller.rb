@@ -10,7 +10,8 @@ class AmorimetrosController < ApplicationController
   end
 
   def index
-    @amorimetros = Amorimetro.page(params[:page]).per(10)
+    @q = Amorimetro.ransack(params[:q])
+    @amorimetros = @q.result(:distinct => true).includes(:user).page(params[:page]).per(10)
 
     render("amorimetro_templates/index.html.erb")
   end
