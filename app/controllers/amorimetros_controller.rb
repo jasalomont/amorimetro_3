@@ -10,7 +10,7 @@ class AmorimetrosController < ApplicationController
   end
 
   def index
-    @amorimetros = Amorimetro.all
+    @amorimetros = Amorimetro.page(params[:page]).per(10)
 
     render("amorimetro_templates/index.html.erb")
   end
